@@ -1,0 +1,114 @@
+============================================================
+MESURE 1 — versions
+============================================================
+Python       : 3.11.5
+scikit-learn : 1.9.1
+pandas       : 3.0.6
+
+============================================================
+MESURE 2 — volumetrie et structure
+============================================================
+lignes, colonnes : (401059, 55)
+patients distincts : 1042
+lesions par patient (min / mediane / max) : 1 241 9184
+
+Types des colonnes :
+isic_id                             str
+target                            int64
+patient_id                          str
+age_approx                      float64
+sex                                 str
+anatom_site_general                 str
+clin_size_long_diam_mm          float64
+image_type                          str
+tbp_tile_type                       str
+tbp_lv_A                        float64
+tbp_lv_Aext                     float64
+tbp_lv_B                        float64
+tbp_lv_Bext                     float64
+tbp_lv_C                        float64
+tbp_lv_Cext                     float64
+tbp_lv_H                        float64
+tbp_lv_Hext                     float64
+tbp_lv_L                        float64
+tbp_lv_Lext                     float64
+tbp_lv_areaMM2                  float64
+tbp_lv_area_perim_ratio         float64
+tbp_lv_color_std_mean           float64
+tbp_lv_deltaA                   float64
+tbp_lv_deltaB                   float64
+tbp_lv_deltaL                   float64
+tbp_lv_deltaLB                  float64
+tbp_lv_deltaLBnorm              float64
+tbp_lv_eccentricity             float64
+tbp_lv_location                     str
+tbp_lv_location_simple              str
+tbp_lv_minorAxisMM              float64
+tbp_lv_nevi_confidence          float64
+tbp_lv_norm_border              float64
+tbp_lv_norm_color               float64
+tbp_lv_perimeterMM              float64
+tbp_lv_radial_color_std_max     float64
+tbp_lv_stdL                     float64
+tbp_lv_stdLExt                  float64
+tbp_lv_symm_2axis               float64
+tbp_lv_symm_2axis_angle           int64
+tbp_lv_x                        float64
+tbp_lv_y                        float64
+tbp_lv_z                        float64
+attribution                         str
+copyright_license                   str
+lesion_id                           str
+iddx_full                           str
+iddx_1                              str
+iddx_2                              str
+iddx_3                              str
+iddx_4                              str
+iddx_5                              str
+mel_mitotic_index                   str
+mel_thick_mm                    float64
+tbp_lv_dnn_lesion_confidence    float64
+
+============================================================
+MESURE 3 — colonnes suspectes de fuite
+============================================================
+(total des malignes dans le jeu : 393)
+iddx_full              rempli  401059  dont malignes  393  (100% des malignes)
+iddx_1                 rempli  401059  dont malignes  393  (100% des malignes)
+iddx_2                 rempli    1068  dont malignes  393  (100% des malignes)
+iddx_3                 rempli    1065  dont malignes  393  (100% des malignes)
+iddx_4                 rempli     551  dont malignes  242  (62% des malignes)
+iddx_5                 rempli       1  dont malignes    0  (0% des malignes)
+mel_thick_mm           rempli      63  dont malignes   63  (16% des malignes)
+mel_mitotic_index      rempli      53  dont malignes   53  (13% des malignes)
+lesion_id              rempli   22058  dont malignes  393  (100% des malignes)
+
+============================================================
+MESURE 4 — valeurs manquantes et colonnes constantes
+============================================================
+Colonnes avec valeurs manquantes (hors fuites) :
+  sex                                11517  (2.87%)
+  anatom_site_general                 5756  (1.44%)
+  age_approx                          2798  (0.70%)
+
+Colonnes constantes : ['image_type']
+
+Variables restantes apres retrait (fuites, identifiants, administratives, constantes, cible) : 40
+Valeurs de 'attribution' (institutions) :
+attribution
+Memorial Sloan Kettering Cancer Center                                                                                                                 129068
+Department of Dermatology, Hospital Clínic de Barcelona                                                                                                105724
+University Hospital of Basel                                                                                                                            65218
+Frazer Institute, The University of Queensland, Dermatology Research Centre                                                                             51768
+ACEMID MIA                                                                                                                                              28665
+ViDIR Group, Department of Dermatology, Medical University of Vienna                                                                                    12640
+Department of Dermatology, University of Athens, Andreas Syggros Hospital of Skin and Venereal Diseases, Alexander Stratigos, Konstantinos Liopyris      7976
+
+============================================================
+MESURE 5 — desequilibre de la cible
+============================================================
+target = 1 : 393
+target = 0 : 400666
+taux de positifs : 0.0980%
+une maligne pour 1020 benignes
+exactitude d'un classifieur 'toujours benin' : 99.9020%

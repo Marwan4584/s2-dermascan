@@ -1,0 +1,62 @@
+== Docker : conteneur de la seance, puis images locales non utilisees
+Deleted Images:
+deleted: sha256:2c47ec0304e23ff15ce014ddd1211174d8fe230085263b6ad8b89b62f67e9528
+deleted: sha256:3dbb40cfa85b9342551b8ef588b79f5b43bf0fff6a4a48812e462a5cf87e46d5
+deleted: sha256:4a575a68ee5f2b62531d2d0beaf31e895e20b28d9dbbf4ec54a1bdb075ff6d55
+deleted: sha256:5edda75efe0ede01c26e68f5bad5b2dfcd2f51fa4b2d5f5b1ce1a6d235f11b0d
+deleted: sha256:912c45b36cbf794a803c9605825361b054313114d54d733fb9b9b14eaf72238e
+
+Deleted build cache objects:
+0tfoqt82i23l6d9qbb09p973j
+yzcrggqnzou4xuen5g0odplai
+g24ghzt9a2zamm1lyc43mhtp6
+vvu6ajojiuaepta2auevx7r37
+1jy1aenowco3u2jjaf8y7is18
+iqak4pw3jiye7aft8ockqg3ab
+k31xn0lrbwrpzx9z01lacu94k
+wgwk71l0py8zt1wuzlliueohh
+vxa5fguppwibc1pyq9sw77d0z
+jhxhiyh752004qhzeqsuun81l
+esohp7lvpl9l9q1fn7hx6trrh
+t85ohopj00yi37aj02keujsc4
+m6ohr4s3oc6byh03e94qiqph7
+o1prx6x84cizqscoot8a178qu
+hxbp0drjo13m7t0cpqgh64iy6
+wpkw1ogz3ogmxzvul321vnb86
+pp7k0rwpx7m2jc1l37iqfwwek
+nlgpo7cf5kw73odrziga5t6t5
+uguq6w5e66gcds6xeoftpold0
+ce9awl9qxmd1ysclbe7pzt3pu
+z9x7qvzokavcjdq44g3bhpr9f
+n3utghlaqi0v6adpyo69kjli0
+are1pm3p32dg2bwxahgiragl4
+18n0dcm6alakpyk1zbcgtw2oj
+idqgq9bx72s5s8aqsyrbv0pqr
+kqqqhpgmvvw6iu0wo1p0ef7an
+x6l1joimtrx8o9s8ke011lsgp
+7rh3fmx3sfdmtjmyfoyajjiqh
+1xs0l4i0a0swzrlevxb92twm6
+
+Total reclaimed space: 1.829GB
+
+== Ressources laissees actives dans rg-dermascan-registre-korich
+Name                ResourceGroup                 Location        Type                                    Status
+------------------  ----------------------------  --------------  --------------------------------------  ---------
+acrdermascankorich  rg-dermascan-registre-korich  belgiumcentral  Microsoft.ContainerRegistry/registries  Succeeded
+
+== Etiquettes du groupe
+{
+  "a_detruire": "2026-12-31",
+  "projet": "dermascan"
+}
+
+== Tous les groupes de l'abonnement (doit n'en montrer qu'un)
+Name                          Location       Status
+----------------------------  -------------  ---------
+rg-dermascan-registre-mk07    francecentral  Succeeded
+rg-dermascan-registre-korich  francecentral  Succeeded
+
+== Image publiee
+Result
+--------
+1.0.0

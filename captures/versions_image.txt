@@ -1,0 +1,9 @@
+Name: scikit-learn
+Version: 1.9.1
+Name: numpy
+Version: 2.4.6
+Name: pandas
+Version: 3.0.6
+Name: joblib
+Version: 1.6.0
+paquet : {'python': '3.11.5', 'scikit-learn': '1.9.1', 'pandas': '3.0.6', 'numpy': '2.4.6', 'joblib': '1.6.0'}

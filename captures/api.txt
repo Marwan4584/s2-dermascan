@@ -1,0 +1,51 @@
+== GET /health
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.9 Python/3.11.5
+Date: Fri, 09 Oct 2026 13:02:00 GMT
+Content-Type: application/json
+Content-Length: 61
+Connection: close
+
+{"model_loaded":true,"status":"ok","version_modele":"1.0.0"}
+
+== GET /model/info
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.9 Python/3.11.5
+Date: Fri, 09 Oct 2026 13:02:00 GMT
+Content-Type: application/json
+Content-Length: 1397
+Connection: close
+
+{"colonnes_attendues":["age_approx","sex","anatom_site_general","clin_size_long_diam_mm","tbp_tile_type","tbp_lv_A","tbp_lv_Aext","tbp_lv_B","tbp_lv_Bext","tbp_lv_C","tbp_lv_Cext","tbp_lv_H","tbp_lv_Hext","tbp_lv_L","tbp_lv_Lext","tbp_lv_areaMM2","tbp_lv_area_perim_ratio","tbp_lv_color_std_mean","tbp_lv_deltaA","tbp_lv_deltaB","tbp_lv_deltaL","tbp_lv_deltaLB","tbp_lv_deltaLBnorm","tbp_lv_eccentricity","tbp_lv_location","tbp_lv_lo
+== POST /predict valide
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.9 Python/3.11.5
+Date: Fri, 09 Oct 2026 13:02:01 GMT
+Content-Type: application/json
+Content-Length: 130
+Connection: close
+
+{"decision":"pas_d_alerte","probabilite_maligne":0.031406,"rappel_cible":0.9,"seuil":0.3475933903641436,"version_modele":"1.0.0"}
+
+== POST /predict incomplete
+HTTP/1.1 400 BAD REQUEST
+Server: Werkzeug/3.1.9 Python/3.11.5
+Date: Fri, 09 Oct 2026 13:02:01 GMT
+Content-Type: application/json
+Content-Length: 273
+Connection: close
+
+{"error":"variables manquantes","manquantes":["tbp_lv_deltaL","tbp_lv_deltaLB","tbp_lv_deltaLBnorm","tbp_lv_eccentricity","tbp_lv_location","tbp_lv_location_simple","tbp_lv_minorAxisMM","tbp_lv_nevi_confidence","tbp_lv_norm_border","tbp_lv_norm_color"],"nb_manquantes":20}
+
+== POST /predict vide
+HTTP/1.1 400 BAD REQUEST
+Server: Werkzeug/3.1.9 Python/3.11.5
+Date: Fri, 09 Oct 2026 13:02:01 GMT
+Content-Type: application/json
+Content-Length: 58
+Connection: close
+
+{"error":"corps JSON absent ou invalide : objet attendu"}
+
+== Latence
+min 8.4 ms | mediane 8.7 ms | max 24.2 ms

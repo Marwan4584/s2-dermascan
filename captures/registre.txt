@@ -1,0 +1,2 @@
+SUFFIXE=korich RG=rg-dermascan-registre-korich ACR_NAME=acrdermascankorich REGION=belgiumcentral A_DETRUIRE=2026-12-31
+acrdermascankorich.azurecr.io

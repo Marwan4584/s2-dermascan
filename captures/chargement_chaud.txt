@@ -1,0 +1,2 @@
+1er chargement (imports des sous-modules compris) : 3839.1 ms
+2e chargement, processus deja chaud : 1.2 ms
