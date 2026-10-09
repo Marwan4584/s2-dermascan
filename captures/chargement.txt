@@ -1,1 +1,0 @@
-chargement joblib.load : 46132 ms

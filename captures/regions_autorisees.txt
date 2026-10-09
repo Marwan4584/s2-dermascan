@@ -1,5 +1,0 @@
->> Regions autorisees par la policy : belgiumcentral
-denmarkeast
-italynorth
-polandcentral
-spaincentral

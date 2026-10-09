@@ -1,3 +1,8 @@
+== Q3.1 : premier chargement juste apres l'installation (imports a froid)
+chargement joblib.load : 46132 ms
+== Q3.1 : chargements suivants
+1er chargement (imports des sous-modules compris) : 3839.1 ms
+2e chargement, processus deja chaud : 1.2 ms
 == GET /health
 HTTP/1.1 200 OK
 Server: Werkzeug/3.1.9 Python/3.11.5
@@ -49,3 +54,13 @@ Connection: close
 
 == Latence
 min 8.4 ms | mediane 8.7 ms | max 24.2 ms
+
+== Q3.3 : API sans modele
+HTTP/1.1 503 SERVICE UNAVAILABLE
+Server: Werkzeug/3.1.9 Python/3.11.5
+Date: Fri, 09 Oct 2026 13:02:06 GMT
+Content-Type: application/json
+Content-Length: 130
+Connection: close
+
+{"erreur":"FileNotFoundError: [Errno 2] No such file or directory: 'absent.joblib'","model_loaded":false,"status":"indisponible"}

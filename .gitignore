@@ -1,4 +1,5 @@
 .venv/
 data/
-model/modele.joblib
+model/
 __pycache__/
+charge*.json

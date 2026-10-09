@@ -1,4 +1,0 @@
-duree de construction : 21 s
-taille : 516MB
-couches : 20
-paquets pip freeze : 19

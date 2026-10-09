@@ -125,9 +125,9 @@ Sans la valeur stockée dans le paquet, on n'aurait rien à quoi comparer.
    envoyer : il faudrait relire le code d'entraînement pour le savoir.
 
 ### Question 3.1
-Mesures (`captures/chargement.txt`, `captures/chargement_chaud.txt`) :
+Mesures (`captures/partie_3_api.txt`) :
 - tout premier chargement après installation (imports à froid de scikit-learn, pandas, numpy) : 46 132 ms ;
-- premier chargement dans un processus Python neuf (imports des sous-modules compris) : 3 960 ms ;
+- premier chargement dans un processus Python neuf (imports des sous-modules compris) : 3 839 ms ;
 - chargement suivant, processus déjà chaud : **1,2 ms**.
 
 Si l'API rechargeait le modèle à chaque requête dans un processus déjà démarré, elle
@@ -227,7 +227,7 @@ sonde reste à 200, et le service rend des décisions différentes de celles qui
 | Tags présents | 1.0.0 |
 
 Remarque : le registre n'existait pas (la séance 1 portait sur Kafka). Il a été créé le
-2026-10-09 avec `creer_registre.sh`. La policy de l'abonnement Azure for Students n'autorise
+2026-10-09 avec `bash tp.sh registre`. La policy de l'abonnement Azure for Students n'autorise
 que belgiumcentral, denmarkeast, italynorth, polandcentral et spaincentral : France
 Central et West Europe ont été refusées (`RequestDisallowedByAzure`).
 

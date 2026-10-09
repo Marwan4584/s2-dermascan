@@ -1,9 +1,12 @@
->> Docker OK
->> 
->> Azure connecte : Azure for Students
-== Q3.1 : chargement a chaud (modules deja importes)
-1er chargement (imports des sous-modules compris) : 3839.1 ms
-2e chargement, processus deja chaud : 1.2 ms
+== Creation du registre
+>> Regions autorisees par la policy : belgiumcentral
+denmarkeast
+italynorth
+polandcentral
+spaincentral
+SUFFIXE=korich RG=rg-dermascan-registre-korich ACR_NAME=acrdermascankorich REGION=belgiumcentral A_DETRUIRE=2026-12-31
+acrdermascankorich.azurecr.io
+
 == Mesure 13 : construction a froid (requirements non epingle)
 duree de construction : 21 s
 taille : 516MB
@@ -102,3 +105,9 @@ dermascan-api
 
 Termine. Resultats dans captures/.
 >> FIN go.sh (code 0)
+
+== Premier essai du conteneur (avant correction du Dockerfile) : erreur de permission
+(extrait des logs du conteneur lors du run de 16:22, avant l'ajout de `RUN chmod -R a+rX /app`)
+PermissionError: [Errno 13] Permission denied: '/app/app.py'
+[2026-10-09 14:22:12 +0000] [1] [ERROR] Worker (pid:7) exited with code 3.
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>

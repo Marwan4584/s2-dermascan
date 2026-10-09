@@ -4,6 +4,7 @@ captures/
 __pycache__/
 *.md
 *.json
+*.sh
+.git/
 explorer.py
 entrainer.py
-latence.py
